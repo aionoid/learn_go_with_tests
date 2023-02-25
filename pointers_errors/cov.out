@@ -1,0 +1,7 @@
+mode: set
+io.com/lgwt/pointers_errors/wallet.go:17.35,19.2 1 0
+io.com/lgwt/pointers_errors/wallet.go:25.41,27.2 1 1
+io.com/lgwt/pointers_errors/wallet.go:29.37,31.2 1 1
+io.com/lgwt/pointers_errors/wallet.go:33.48,34.22 1 1
+io.com/lgwt/pointers_errors/wallet.go:37.2,38.12 2 1
+io.com/lgwt/pointers_errors/wallet.go:34.22,36.3 1 1
