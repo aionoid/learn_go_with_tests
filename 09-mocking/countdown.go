@@ -16,10 +16,13 @@ const (
 	countdownStart = 3
 )
 
-type DefaultSleeper struct{}
+type ConfigurableSleeper struct {
+	duration time.Duration
+	sleep    func(time.Duration)
+}
 
-func (d DefaultSleeper) Sleep() {
-	time.Sleep(1 * time.Second)
+func (c ConfigurableSleeper) Sleep() {
+	c.sleep(c.duration)
 }
 
 type Sleeper interface {
@@ -36,6 +39,6 @@ func Countdown(writer io.Writer, sleeper Sleeper) {
 
 func main() {
 	fmt.Println("vim-go")
-	slp := &DefaultSleeper{}
+	slp := &ConfigurableSleeper{1 * time.Second, time.Sleep}
 	Countdown(os.Stdout, slp)
 }
